@@ -5,12 +5,13 @@ import MainPageAsync from "./pages/MainPage/MainPage.async";
 import { Suspense, useContext, useState } from "react";
 import { Theme, ThemeContext, ThemeContextProps } from "./theme/ThemeContext";
 import { useTheme } from "./theme/useTheme";
+import { classNames } from "./helpers/classNames/classNames";
 
 const App = () => {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <div className={`app ${theme}`}>
+    <div className={classNames("app", {}, [theme])}>
       <Link to={"/"}>Main</Link>
       <Link to={"/about"}>About</Link>
       <button onClick={toggleTheme}>Them</button>
