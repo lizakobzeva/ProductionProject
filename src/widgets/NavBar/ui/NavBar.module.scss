@@ -1,0 +1,19 @@
+.navbar {
+  width: 100%;
+  padding: 25px;
+  // background-color: var(--primary-color);
+}
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.toggleBtn {
+  overflow: hidden;
+}
+.links {
+  display: flex;
+  gap: 20px;
+}
