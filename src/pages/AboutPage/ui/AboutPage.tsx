@@ -1,7 +1,11 @@
-import React from "react";
+import image from "shared/assets/Alpaca.png";
 
 const AboutPage = () => {
-  return <div>ABOUT PAGE</div>;
+  return (
+    <div>
+      <img src={image} alt="" />
+    </div>
+  );
 };
 
 export default AboutPage;

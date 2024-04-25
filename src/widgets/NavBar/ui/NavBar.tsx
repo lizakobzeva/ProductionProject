@@ -2,7 +2,8 @@ import { Link, NavLink } from "react-router-dom";
 import style from "./NavBar.module.scss";
 import { classNames } from "shared/lib/classNames/classNames";
 import { useTheme } from "app/providers/ThemProvider";
-import ToggleThemButton from "shared/ui/ToggleThemeButton/ToggleThemButton";
+import ToggleThemButton from "widgets/ToggleThemeButton";
+
 const NavBar = () => {
   const { theme, toggleTheme } = useTheme();
   return (
@@ -15,6 +16,9 @@ const NavBar = () => {
           </NavLink>
           <NavLink className={style.link} to={"/about"}>
             About
+          </NavLink>
+          <NavLink className={style.link} to={"/cats"}>
+            Cats
           </NavLink>
         </div>
       </div>
