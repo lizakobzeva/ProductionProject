@@ -12,7 +12,6 @@ const App = () => {
   return (
     <div className={classNames("app", {}, [theme])}>
       <NavBar />
-
       <Suspense fallback={<div>Loading...</div>}>
         <Router />
       </Suspense>

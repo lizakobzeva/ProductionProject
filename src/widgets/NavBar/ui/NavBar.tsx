@@ -22,6 +22,7 @@ const NavBar = () => {
           </NavLink>
         </div>
       </div>
+      {/* <BurgerMenu /> */}
     </div>
   );
 };
