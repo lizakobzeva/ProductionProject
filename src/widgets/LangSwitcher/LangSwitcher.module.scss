@@ -1,0 +1,61 @@
+.menu {
+  filter: drop-shadow(1px 1px 1px);
+  width: 150px;
+  height: 40px;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  background: var(--accent);
+}
+
+li {
+  color: var(--background);
+  display: block;
+  padding: 10px;
+  cursor: pointer;
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  background-color: var(--color2);
+  color: var(--color1);
+  max-width: 100%;
+  p {
+    transition: 300ms;
+  }
+}
+li:hover {
+  p {
+    transform: translate(35px, 0);
+    transition: 500ms;
+  }
+}
+
+button {
+  -webkit-appearance: button;
+  background: var(--accent);
+  color: var(--background);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color2);
+  color: var(--color1);
+}
+
+button path {
+  fill: var(--color1);
+  font-family: sofia-pro, sans-serif;
+}

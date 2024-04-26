@@ -12,7 +12,11 @@
   font-size: var(--font-m);
   transition: 700ms;
   background: var(--color1);
-  color: var(--color2);
+  color: var(--color3);
 
   min-height: 100vh;
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 }
