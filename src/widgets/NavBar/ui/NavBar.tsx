@@ -3,7 +3,11 @@ import style from "./NavBar.module.scss";
 import { classNames } from "shared/lib/classNames/classNames";
 import { useTheme } from "app/providers/ThemProvider";
 import ToggleThemButton from "widgets/ToggleThemeButton";
-import { AppRoutes, RoutePath } from "shared/config/RouteConfig/RouteConfig";
+import {
+  AppRoutes,
+  RoutePath,
+  routeConfig,
+} from "shared/config/RouteConfig/RouteConfig";
 import LangSwitcher from "widgets/LangSwitcher/LangSwitcher";
 
 const NavBar = () => {
@@ -14,20 +18,12 @@ const NavBar = () => {
         <ToggleThemButton />
         <LangSwitcher />
         <div className={style.links}>
-          {Object.values(RoutePath).map((value) => {
-            return (
-              <NavLink className={style.link} to={value}>
-                Main
-              </NavLink>
-            );
-          })}
-
-          {/* <NavLink className={style.link} to={"/about"}>
+          <NavLink className={style.link} to={"/"}>
+            Main
+          </NavLink>
+          <NavLink className={style.link} to={"/about"}>
             About
           </NavLink>
-          <NavLink className={style.link} to={"/cats"}>
-            Cats
-          </NavLink> */}
         </div>
       </div>
       {/* <BurgerMenu /> */}
