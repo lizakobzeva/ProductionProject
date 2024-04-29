@@ -3,15 +3,10 @@ import style from "./NavBar.module.scss";
 import { classNames } from "shared/lib/classNames/classNames";
 import { useTheme } from "app/providers/ThemProvider";
 import ToggleThemButton from "widgets/ToggleThemeButton";
-import {
-  AppRoutes,
-  RoutePath,
-  routeConfig,
-} from "shared/config/RouteConfig/RouteConfig";
 import LangSwitcher from "widgets/LangSwitcher/LangSwitcher";
 
 const NavBar = () => {
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
   return (
     <div className={classNames(style.navbar, {}, [theme])}>
       <div className={style.container}>

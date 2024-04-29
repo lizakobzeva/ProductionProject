@@ -69,18 +69,20 @@ export default function LangSwitcher() {
         <motion.li
           onClick={() => {
             toogleLang("ru");
+            setIsOpen(false);
           }}
           variants={itemVariants}
         >
-          <p>Русский</p>
+          <p className={i18n.language == "ru" ? style.active : ""}>Русский</p>
         </motion.li>
         <motion.li
           onClick={() => {
             toogleLang("en");
+            setIsOpen(false);
           }}
           variants={itemVariants}
         >
-          <p>English</p>
+          <p className={i18n.language == "en" ? style.active : ""}>English</p>
         </motion.li>
       </motion.ul>
     </motion.nav>

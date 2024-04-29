@@ -1,5 +1,3 @@
-import { AboutPage } from "pages/AboutPage";
-import { MainPage } from "pages/MainPage";
 import { Route, RouteProps, Routes } from "react-router-dom";
 import { routeConfig } from "shared/config/RouteConfig/RouteConfig";
 

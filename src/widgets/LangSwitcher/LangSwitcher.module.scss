@@ -8,31 +8,43 @@ ul {
   display: flex;
   flex-direction: column;
   background: var(--accent);
+  padding: 10px 20px;
 }
 
 li {
   color: var(--background);
   display: block;
-  padding: 10px;
+
   cursor: pointer;
 }
 
 ul,
 li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
   list-style: none;
   margin: 0;
+  gap: 10px;
   background-color: var(--color2);
   color: var(--color1);
   max-width: 100%;
   p {
-    transition: 300ms;
+    transition: 100ms;
+    width: 100%;
   }
 }
 li:hover {
   p {
-    transform: translate(35px, 0);
-    transition: 500ms;
+    scale: 1.1;
+    transition: 200ms;
   }
+}
+
+.active {
+  scale: 1.1;
+  color: var(--color3);
 }
 
 button {
