@@ -3,7 +3,7 @@ import style from "./NavBar.module.scss";
 import { classNames } from "shared/lib/classNames/classNames";
 import { useTheme } from "app/providers/ThemProvider";
 import ToggleThemButton from "widgets/ToggleThemeButton";
-import LangSwitcher from "widgets/LangSwitcher/LangSwitcher";
+import LangSwitcher from "widgets/LangSwitcher";
 
 const NavBar = () => {
   const { theme } = useTheme();

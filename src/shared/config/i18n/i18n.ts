@@ -11,7 +11,7 @@ i18n
   .use(initReactI18next)
   .init({
     fallbackLng: "ru",
-    debug: _isDev ? true : false,
+    debug: true,
 
     interpolation: {
       escapeValue: false,
