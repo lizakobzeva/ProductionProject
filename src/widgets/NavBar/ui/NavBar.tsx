@@ -1,14 +1,14 @@
 import { NavLink } from "react-router-dom";
 import style from "./NavBar.module.scss";
 import { classNames } from "shared/lib/classNames/classNames";
-import { useTheme } from "app/providers/ThemProvider";
+// import { useTheme } from "app/providers/ThemProvider";
 import ToggleThemButton from "widgets/ToggleThemeButton";
 import LangSwitcher from "widgets/LangSwitcher";
 
 const NavBar = () => {
-  const { theme } = useTheme();
+  // const { theme } = useTheme();
   return (
-    <div className={classNames(style.navbar, {}, [theme])}>
+    <div className={classNames(style.navbar, {}, [])}>
       <div className={style.container}>
         <ToggleThemButton />
         <LangSwitcher />
