@@ -9,7 +9,7 @@ const meta: Meta<typeof Button> = {
 };
 
 export default {
-  title: "widgets/BurgerMenu",
+  title: "shared/BurgerMenu",
 };
 type Story = StoryObj<typeof Button>;
 
