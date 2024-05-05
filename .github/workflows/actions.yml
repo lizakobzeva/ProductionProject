@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: ${{matrix.node-version}}
       - name: install modules
-        run: CXXFLAGS="--std=c++14" npm install
+        run: npm install --legacy-peer-deps
       - name: build production project
         run: npm run build:prod
       - name: testing
