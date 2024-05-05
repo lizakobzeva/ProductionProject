@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1714640927261" clover="3.2.0">
-  <project timestamp="1714640927261" name="All files">
+<coverage generated="1714889121906" clover="3.2.0">
+  <project timestamp="1714889121907" name="All files">
     <metrics statements="17" coveredstatements="12" conditionals="10" coveredconditionals="8" methods="9" coveredmethods="6" elements="36" coveredelements="26" complexity="0" loc="17" ncloc="17" packages="4" files="4" classes="4"/>
     <package name="shared.config.i18n">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -23,8 +23,8 @@
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="Button.tsx" path="D:\ReactProjects\ProductionProject\src\shared\ui\Button\ui\Button.tsx">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="7" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
       </file>
     </package>
     <package name="widgets.LangSwitcher.ui">
