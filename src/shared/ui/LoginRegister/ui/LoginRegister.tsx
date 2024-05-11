@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import style from "./LoginRegister.module.scss";
 import Button from "shared/ui/Button";
+import { useTranslation } from "react-i18next";
 const LoginRegister = () => {
   const [isSignUp, setIsSignUp] = useState(true);
+  const { t } = useTranslation();
   return (
     <article className={isSignUp ? style.Click : ""}>
       <div className={style.Titles}>
-        <h3 onClick={() => setIsSignUp(true)}>SignUp</h3>
-        <h3 onClick={() => setIsSignUp(false)}>LogIn</h3>
+        <h3 onClick={() => setIsSignUp(true)}>{t("Sign Up")}</h3>
+        <h3 onClick={() => setIsSignUp(false)}>{t("Log In")}</h3>
       </div>
 
       <label htmlFor="reg-log"></label>
@@ -15,13 +17,13 @@ const LoginRegister = () => {
         <div className={style.card3DWrapper}>
           <div className={style.cardFront}>
             <form className={style.centerWrap}>
-              <h4 className={style.cardTitle}>Log In</h4>
+              <h4 className={style.cardTitle}>{t("Log In")}</h4>
               <div className={style.formGroup}>
                 <input
                   type="email"
                   name="logemail"
                   className={style.formStyle}
-                  placeholder="Your Email"
+                  placeholder={t("Your Email")}
                   id="logemail"
                   autoComplete="off"
                 />
@@ -31,28 +33,28 @@ const LoginRegister = () => {
                   type="password"
                   name="logpass"
                   className={style.formStyle}
-                  placeholder="Your Password"
+                  placeholder={t("Your Password")}
                   id="logpass"
                   autoComplete="off"
                 />
               </div>
-              <Button>Submit</Button>
+              <Button>{t("Submit")}</Button>
               <p>
                 <a href="#0" className={style.link}>
-                  Forgot your password?
+                  {t("Forgot your password?")}
                 </a>
               </p>
             </form>
           </div>
           <div className={style.cardBack}>
             <form className={style.centerWrap}>
-              <h4 className={style.cardTitle}>Sign Up</h4>
+              <h4 className={style.cardTitle}>{t("Sign Up")}</h4>
               <div className={style.formGroup}>
                 <input
                   type="text"
                   name="logname"
                   className={style.formStyle}
-                  placeholder="Your Full Name"
+                  placeholder={t("Your Full Name")}
                   id="logname"
                   autoComplete="off"
                 />
@@ -62,7 +64,7 @@ const LoginRegister = () => {
                   type="email"
                   name="logemail"
                   className={style.formStyle}
-                  placeholder="Your Email"
+                  placeholder={t("Your Email")}
                   id="logemail"
                   autoComplete="off"
                 />
@@ -73,13 +75,13 @@ const LoginRegister = () => {
                   type="password"
                   name="logpass"
                   className={style.formStyle}
-                  placeholder="Your Password"
+                  placeholder={t("Your Password")}
                   id="logpass"
                   autoComplete="off"
                 />
                 <i className={style.inputIcon}></i>
               </div>
-              <Button>Submit</Button>
+              <Button>{t("Submit")}</Button>
             </form>
           </div>
         </div>

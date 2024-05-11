@@ -20,11 +20,11 @@
 .link {
   cursor: pointer;
   transition: all 200ms linear;
-  color: #c4c3ca;
+  color: var(--color4);
   text-decoration: none;
 }
 .link:hover {
-  color: #ffeba7;
+  color: var(--color2);
 }
 
 .card3DWrap {
@@ -138,7 +138,7 @@
   input:-moz-placeholder,
   input::-webkit-input-placeholde {
     width: 100%;
-    color: #c4c3ca;
+    color: var(--color5);
     opacity: 0.7;
     -webkit-transition: all 200ms linear;
     transition: all 200ms linear;
@@ -151,6 +151,7 @@
   input:focus::-moz-placeholder,
   input:focus:-moz-placeholder,
   input:focus::-webkit-input-placeholder {
+    color: var(--color5);
     opacity: 0;
     -webkit-transition: all 200ms linear;
     transition: all 200ms linear;

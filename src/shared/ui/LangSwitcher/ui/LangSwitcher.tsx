@@ -1,9 +1,8 @@
-// import i18n from "shared/config/i18n/i18n";
 import style from "./LangSwitcher.module.scss";
 
 import { useState } from "react";
 import { motion, Variants } from "framer-motion";
-import i18n from "shared/config/i18n/i18n";
+import i18n from "i18next";
 
 const itemVariants: Variants = {
   open: {

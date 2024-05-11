@@ -9,9 +9,11 @@ import ToggleThemButton from "shared/ui/ToggleThemeButton";
 import LangSwitcher from "shared/ui/LangSwitcher";
 import LoginRegister from "shared/ui/LoginRegister";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const NavBar = () => {
   const [IsModal, setIsModal] = useState(false);
+  const { t } = useTranslation();
   return (
     <div className={classNames(style.navbar, {}, [])}>
       <div className={style.container}>
@@ -40,7 +42,7 @@ const NavBar = () => {
         </div>
 
         <div className={style.auth} onClick={() => setIsModal(true)}>
-          <Button>Login</Button>
+          <Button>{t("Log In")}</Button>
         </div>
         <Modal isOpend={IsModal} onClose={() => setIsModal(false)}>
           <LoginRegister></LoginRegister>
