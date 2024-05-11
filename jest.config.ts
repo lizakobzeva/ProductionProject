@@ -3,9 +3,10 @@ import path from "path";
 
 const config: Config = {
   clearMocks: true,
-
+  modulePaths: ["<rootDir>src"],
   collectCoverage: true,
 
+  globals: { _isDev: true },
   coverageDirectory: "coverage",
 
   setupFilesAfterEnv: ["<rootDir>config/jest/SetupTests.ts"],
