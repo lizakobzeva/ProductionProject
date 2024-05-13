@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import style from "./LoginRegister.module.scss";
+import style from "./LoginRegisterForm.module.scss";
 import Button from "shared/ui/Button";
 import { useTranslation } from "react-i18next";
-const LoginRegister = () => {
+const LoginRegisterForm = () => {
   const [isSignUp, setIsSignUp] = useState(true);
   const { t } = useTranslation();
   return (
@@ -90,4 +90,4 @@ const LoginRegister = () => {
   );
 };
 
-export default LoginRegister;
+export default LoginRegisterForm;

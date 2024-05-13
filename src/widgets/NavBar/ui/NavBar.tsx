@@ -1,15 +1,13 @@
 import { NavLink } from "react-router-dom";
 import style from "./NavBar.module.scss";
 import { classNames } from "shared/lib/classNames/classNames";
-// import { useTheme } from "app/providers/ThemProvider";
 
 import Button from "shared/ui/Button";
-import Modal from "shared/ui/Modal";
 import ToggleThemButton from "shared/ui/ToggleThemeButton";
 import LangSwitcher from "shared/ui/LangSwitcher";
-import LoginRegister from "shared/ui/LoginRegister";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { LoginRegisterModal } from "features/AuthByUsername/ui";
 
 const NavBar = () => {
   const [IsModal, setIsModal] = useState(false);
@@ -44,9 +42,10 @@ const NavBar = () => {
         <div className={style.auth} onClick={() => setIsModal(true)}>
           <Button>{t("Log In")}</Button>
         </div>
-        <Modal isOpend={IsModal} onClose={() => setIsModal(false)}>
-          <LoginRegister></LoginRegister>
-        </Modal>
+        <LoginRegisterModal
+          isOpend={IsModal}
+          onClose={() => setIsModal(false)}
+        />
       </div>
       {/* <BurgerMenu /> */}
     </div>
