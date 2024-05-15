@@ -7,7 +7,7 @@ import ToggleThemButton from "shared/ui/ToggleThemeButton";
 import LangSwitcher from "shared/ui/LangSwitcher";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { LoginRegisterModal } from "features/AuthByUsername/ui";
+import { LoginRegisterModal } from "features/AuthByEmail/ui";
 
 const NavBar = () => {
   const [IsModal, setIsModal] = useState(false);
@@ -39,8 +39,8 @@ const NavBar = () => {
           </NavLink>
         </div>
 
-        <div className={style.auth} onClick={() => setIsModal(true)}>
-          <Button>{t("Log In")}</Button>
+        <div className={style.auth}>
+          <Button onClick={() => setIsModal(true)}>{t("Log In")}</Button>
         </div>
         <LoginRegisterModal
           isOpend={IsModal}
