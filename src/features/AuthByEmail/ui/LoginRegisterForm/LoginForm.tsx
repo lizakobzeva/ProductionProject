@@ -28,11 +28,11 @@ const LoginForm = () => {
   // const isError = useSelector(getError);
 
   const onSubmit: SubmitHandler<Inputs> = (data) => {
-    dispatch(setLoading(true));
-    LoginByEmail(data.email, data.password).then((user) => {
-      dispatch(setLoading(false));
-      console.log(user);
-    });
+    // dispatch(setLoading(true));
+    // LoginByEmail(data.email, data.password).then((user) => {
+    //   dispatch(setLoading(false));
+    //   console.log(user);
+    // });
   };
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={style.centerWrap}>

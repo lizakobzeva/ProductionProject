@@ -1,5 +1,6 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { LoginShema } from "../types/LoginShema";
+import { LoginByEmail } from "../services/LoginByEmail/LoginByEmail";
 
 const initialState: LoginShema = {
   email: "",
@@ -24,20 +25,20 @@ export const LoginSlice = createSlice({
       state.error = actions.payload;
     },
   },
-  // extraReducers: (builder) => {
-  //   builder
-  //     .addCase(LoginByEmail.fulfilled, (state, action) => {
-  //       state.isLoading = false;
-  //       state.error = false;
-  //     })
-  //     .addCase(LoginByEmail.pending, (state) => {
-  //       state.isLoading = true;
-  //     })
-  //     .addCase(LoginByEmail.rejected, (state) => {
-  //       state.isLoading = false;
-  //       state.error = true;
-  //     });
-  // },
+  extraReducers: (builder) => {
+    builder
+      .addCase(LoginByEmail.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.error = false;
+      })
+      .addCase(LoginByEmail.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(LoginByEmail.rejected, (state) => {
+        state.isLoading = false;
+        state.error = true;
+      });
+  },
 });
 
 export const { setEmail, setPassword, setLoading, setError } =
