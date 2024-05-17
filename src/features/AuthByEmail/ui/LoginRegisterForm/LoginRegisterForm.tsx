@@ -3,10 +3,15 @@ import style from "./LoginRegisterForm.module.scss";
 import { useTranslation } from "react-i18next";
 import LoginForm from "./LoginForm";
 import RegisterForm from "./RegisterForm";
+import { useSelector } from "react-redux";
+import { getLoading } from "../../model/selectors/getLoading/getLoading";
+import Loader from "shared/ui/Loader";
 
 const LoginRegisterForm = () => {
   const [isSignUp, setIsSignUp] = useState(true);
   const { t } = useTranslation();
+
+  const isLoading = useSelector(getLoading);
 
   return (
     <article className={isSignUp ? style.Click : ""}>
@@ -19,7 +24,7 @@ const LoginRegisterForm = () => {
       <div className={style.card3DWrap}>
         <div className={style.card3DWrapper}>
           <div className={style.cardFront}>
-            <LoginForm />
+            {isLoading ? <Loader /> : <LoginForm />}
           </div>
           <div className={style.cardBack}>
             <RegisterForm />

@@ -1,4 +1,4 @@
-import style from "./PageLoader.module.scss";
+import style from "./Loader.module.scss";
 const PageLoader = () => {
   return (
     <div className={style.PageLoader}>

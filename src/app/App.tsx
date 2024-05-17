@@ -5,7 +5,7 @@ import { classNames } from "../shared/lib/classNames/classNames";
 
 import Router from "./providers/router";
 import NavBar from "widgets/NavBar";
-import PageLoader from "widgets/PageLoader";
+import Loader from "shared/ui/Loader";
 
 const App = () => {
   const { theme } = useTheme();
@@ -16,7 +16,7 @@ const App = () => {
         <NavBar />
 
         <div className="container">
-          <Suspense fallback={<PageLoader />}>
+          <Suspense fallback={<Loader />}>
             <Router />
           </Suspense>
         </div>

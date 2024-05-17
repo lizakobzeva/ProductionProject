@@ -8,15 +8,16 @@ export interface LoginByEmailTypes {
 }
 export const LoginByEmail = createAsyncThunk(
   "login/loginByEmail",
-  async (authData: LoginByEmailTypes) => {
+  async (authData: LoginByEmailTypes, thunckAPI) => {
     try {
       const response = await axios.post<User>(
         "http://localhost:8000/login",
         authData
       );
+
       return response.data;
     } catch (e) {
-      console.log(e);
+      return thunckAPI.rejectWithValue("error");
     }
   }
 );
