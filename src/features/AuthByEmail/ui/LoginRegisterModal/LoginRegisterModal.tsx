@@ -1,6 +1,8 @@
 import Modal from "shared/ui/Modal";
-import LoginRegisterForm from "../LoginRegisterForm/LoginRegisterForm";
-import { ReactNode } from "react";
+
+import { ReactNode, Suspense } from "react";
+import { LoginRegisterForm } from "../LoginRegisterForm/LoginRegisterForm.async";
+import Loader from "shared/ui/Loader";
 
 interface LoginRegisterModalProps {
   children?: ReactNode;
@@ -14,7 +16,9 @@ const LoginRegisterModal = ({
 }: LoginRegisterModalProps) => {
   return (
     <Modal isOpend={isOpend} onClose={onClose}>
-      <LoginRegisterForm></LoginRegisterForm>
+      <Suspense fallback={<Loader />}>
+        {isOpend && <LoginRegisterForm />}
+      </Suspense>
     </Modal>
   );
 };
