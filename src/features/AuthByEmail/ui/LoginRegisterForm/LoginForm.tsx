@@ -1,10 +1,10 @@
 import style from "./LoginRegisterForm.module.scss";
 import Button from "shared/ui/Button";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { useAppDispatch } from "app/providers/StoreProvider";
 import { LoginByEmail } from "../../model/services/LoginByEmail/LoginByEmail";
 import { useSelector } from "react-redux";
 import { getLogin } from "features/AuthByEmail/model/selectors/getLogin/getLogin";
+import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
 
 type Inputs = {
   email: string;
@@ -20,7 +20,7 @@ const LoginForm = () => {
     formState: { errors },
   } = useForm<Inputs>();
 
-  const { email, password, error, isLoading } = useSelector(getLogin);
+  const error = useSelector(getLogin)?.error;
 
   const onSubmit: SubmitHandler<Inputs> = (data) => {
     dispatch(LoginByEmail(data));

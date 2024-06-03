@@ -1,3 +1,3 @@
-import { StateShema } from "app/providers/StoreProvider/config/StateShema";
+import { StateSchema } from "app/providers/StoreProvider/config/StateShema";
 
-export const getLogin = (state: StateShema) => state.login;
+export const getLogin = (state: StateSchema) => state?.login;

@@ -1,35 +1,31 @@
-import { configureStore } from "@reduxjs/toolkit";
+import { counterSlice } from "entities/Counter/model/slice/CounterSlice";
+import { StateSchema } from "./StateShema";
+import { userSlice } from "entities/User/model/slice/UserSlice";
+import { ReducersMapObject, configureStore } from "@reduxjs/toolkit";
+import { createReducerManager } from "./reducerManager";
 
-import { StateShema } from "./StateShema";
-import { CounterSlice } from "entities/Counter";
-import { UserSlice } from "entities/User";
-import LoginSlice from "features/AuthByEmail/model/slice/LoginSlice";
-import { useDispatch } from "react-redux";
-import RegisterSlice from "features/AuthByEmail/model/slice/RegisterSlice";
+export function createReduxStore(
+  initialState?: StateSchema,
+  asyncReducers?: ReducersMapObject<StateSchema>
+) {
+  const rootReducers: ReducersMapObject<StateSchema> = {
+    ...asyncReducers,
+    counter: counterSlice.reducer,
+    user: userSlice.reducer,
+  };
 
-const store = configureStore<StateShema>({
-  reducer: {
-    counter: CounterSlice,
-    user: UserSlice,
-    login: LoginSlice,
-    register: RegisterSlice,
-  },
-  devTools: _isDev,
-});
+  const reducerManager = createReducerManager(rootReducers);
 
-export function CreateReduxStore(initialState?: StateShema) {
-  const store = configureStore<StateShema>({
-    reducer: {
-      counter: CounterSlice,
-      user: UserSlice,
-      login: LoginSlice,
-      register: RegisterSlice,
-    },
+  const store = configureStore<StateSchema>({
+    reducer: reducerManager.reduce,
     devTools: _isDev,
     preloadedState: initialState,
   });
+
+  // @ts-ignore
+  store.reducerManager = reducerManager;
+
   return store;
 }
 
-export type AppDispatch = typeof store.dispatch;
-export const useAppDispatch = useDispatch.withTypes<AppDispatch>();
+export type AppDispatch = ReturnType<typeof createReduxStore>["dispatch"];

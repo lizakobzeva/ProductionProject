@@ -2,9 +2,9 @@ import style from "./LoginRegisterForm.module.scss";
 import Button from "shared/ui/Button";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { useSelector } from "react-redux";
-import { useAppDispatch } from "app/providers/StoreProvider";
 import { RegisterByEmail } from "features/AuthByEmail/model/services/LoginByEmail/RegisterByEmail";
 import { getRegister } from "features/AuthByEmail/model/selectors/getRegister/getRegister";
+import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
 
 type Inputs = {
   name: string;
@@ -21,7 +21,7 @@ const RegisterForm = () => {
     formState: { errors },
   } = useForm<Inputs>();
 
-  const { name, email, password, error, isLoading } = useSelector(getRegister);
+  const error = useSelector(getRegister)?.error;
 
   const onSubmit: SubmitHandler<Inputs> = (data) => {
     const dataReg = {
