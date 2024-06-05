@@ -1,4 +1,4 @@
+import { userReducer } from "./model/slice/UserSlice";
 import { UserShema } from "./model/types/user";
-import UserSlice from "./model/slice/UserSlice";
 
-export { UserShema, UserSlice };
+export { UserShema, userReducer };

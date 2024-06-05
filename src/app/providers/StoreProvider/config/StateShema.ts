@@ -3,6 +3,7 @@ import {
   EnhancedStore,
   Reducer,
   ReducersMapObject,
+  combineReducers,
 } from "@reduxjs/toolkit";
 import { CounterShema } from "entities/Counter/model/types/CounterShema";
 import { UserShema } from "entities/User/model/types/user";
@@ -23,7 +24,8 @@ export type StateSchemaKey = keyof StateSchema;
 
 export interface ReducerManager {
   getReducerMap: () => ReducersMapObject<StateSchema>;
-  reduce: (state: StateSchema, action: UnknownAction) => any;
+  reduce: (state: StateSchema, action: UnknownAction) => StateSchema;
+  // typeof combineReducers<StateSchema>;
   add: (key: StateSchemaKey, reducer: Reducer) => void;
   remove: (key: StateSchemaKey) => void;
 }

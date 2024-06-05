@@ -1,6 +1,6 @@
-import { counterSlice } from "entities/Counter/model/slice/CounterSlice";
+import { counterReducer } from "entities/Counter/model/slice/CounterSlice";
 import { StateSchema } from "./StateShema";
-import { userSlice } from "entities/User/model/slice/UserSlice";
+import { userReducer } from "entities/User/model/slice/UserSlice";
 import { ReducersMapObject, configureStore } from "@reduxjs/toolkit";
 import { createReducerManager } from "./reducerManager";
 
@@ -10,8 +10,8 @@ export function createReduxStore(
 ) {
   const rootReducers: ReducersMapObject<StateSchema> = {
     ...asyncReducers,
-    counter: counterSlice.reducer,
-    user: userSlice.reducer,
+    user: userReducer,
+    counter: counterReducer,
   };
 
   const reducerManager = createReducerManager(rootReducers);

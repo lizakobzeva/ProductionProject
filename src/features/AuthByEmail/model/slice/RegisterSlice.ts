@@ -39,4 +39,4 @@ export const RegisterSlice = createSlice({
 
 export const { setEmail, setPassword } = RegisterSlice.actions;
 
-export default RegisterSlice.reducer;
+export const { reducer: registerReducer } = RegisterSlice;
