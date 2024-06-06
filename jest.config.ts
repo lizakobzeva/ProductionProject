@@ -3,6 +3,7 @@ import path from "path";
 
 const config: Config = {
   clearMocks: true,
+
   modulePaths: ["<rootDir>src"],
   collectCoverage: true,
 

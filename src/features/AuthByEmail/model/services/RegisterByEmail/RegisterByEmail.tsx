@@ -1,7 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-import { setAuthData } from "entities/User/model/slice/UserSlice";
-import { User } from "entities/User/model/types/user";
+import { setAuthData } from "../../../../../entities/User/model/slice/UserSlice";
 import { USER_LOCALSTORAGE_KEY } from "shared/const/localStorage";
 
 export interface RegisterByEmailTypes {

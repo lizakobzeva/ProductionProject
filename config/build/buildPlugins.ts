@@ -21,8 +21,7 @@ export function buildPlugins({
       _isDev: JSON.stringify(isDev),
     }),
   ];
-  new BundleAnalyzerPlugin({ openAnalyzer: isDev });
-
+  // plugins.push(new BundleAnalyzerPlugin({ openAnalyzer: isDev }));
   if (isDev) {
     plugins.push(new webpack.HotModuleReplacementPlugin());
   }

@@ -2,7 +2,7 @@ import style from "./LoginRegisterForm.module.scss";
 import Button from "shared/ui/Button";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { useSelector } from "react-redux";
-import { RegisterByEmail } from "features/AuthByEmail/model/services/LoginByEmail/RegisterByEmail";
+import { RegisterByEmail } from "features/AuthByEmail/model/services/RegisterByEmail/RegisterByEmail";
 import { getRegister } from "features/AuthByEmail/model/selectors/getRegister/getRegister";
 import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
 

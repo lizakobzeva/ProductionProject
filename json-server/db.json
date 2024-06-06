@@ -4,15 +4,28 @@
       "email": "lizakobzeva@list.ru",
       "password": "$2a$10$Zn.9VXxWN/lOJndmP52WIe8kHfm9BgpDCEcwsTuDqQZOamd/RFLz6",
       "name": "liza",
-      "likedPosts": [""],
+      "likedPosts": [
+        ""
+      ],
       "id": "I7yy6Eu"
     },
     {
       "email": "asdfa@dffads",
       "password": "$2a$10$xAhGQUCVcsIKineULVNX7Ox6p6Y2ncTZHCIYporIhDgUdtDfb1jiO",
       "name": "fsdfa",
-      "likedPosts": [""],
+      "likedPosts": [
+        ""
+      ],
       "id": "eNlVuMl"
+    },
+    {
+      "email": "nastia@gmail.com",
+      "password": "$2a$10$Fu0KgrBOZqH01X0irCD9Huro1ifE53JBeTIXknTHGhrWE4AHnQ5CK",
+      "name": "nastia",
+      "likedPosts": [
+        ""
+      ],
+      "id": "RJUbrBh"
     }
   ]
 }

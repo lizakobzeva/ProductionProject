@@ -1,7 +1,7 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { LoginByEmail } from "../services/LoginByEmail/LoginByEmail";
 import { RegisterShema } from "../types/RegisterShema";
-import { RegisterByEmail } from "../services/LoginByEmail/RegisterByEmail";
+import { RegisterByEmail } from "../services/RegisterByEmail/RegisterByEmail";
 
 const initialState: RegisterShema = {
   name: "",
