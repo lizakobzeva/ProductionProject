@@ -46,7 +46,7 @@ const NavBar = () => {
         </div>
 
         {user ? (
-          <Avatar UserName={user?.name} />
+          <Avatar UserName={user?.name} UserAvatar={user?.avatar} />
         ) : (
           <>
             <div className={style.auth}>
