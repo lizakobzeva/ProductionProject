@@ -1,0 +1,14 @@
+.Avatar {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+  background-color: var(--color2);
+  border-radius: 10px;
+  padding: 0 15px;
+  filter: drop-shadow(1px 1px 1px);
+  p {
+    color: var(--color1);
+  }
+  // justify-content: space-between;
+}
