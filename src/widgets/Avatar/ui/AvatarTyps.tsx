@@ -49,8 +49,8 @@ export const AvatarIcons: Record<Animals, ReactNode> = {
   [Animals.MANATEE]: <Manatee />,
   [Animals.MONKEY]: <Monkey />,
   [Animals.RACCOON]: <Raccoon />,
-  [Animals.ROOSTER]: "",
-  [Animals.SEARAY]: "",
-  [Animals.TOUCAN]: "",
-  [Animals.WHALE]: "",
+  [Animals.ROOSTER]: <Rooster />,
+  [Animals.SEARAY]: <SeaRay />,
+  [Animals.TOUCAN]: <Toucan />,
+  [Animals.WHALE]: <Whale />,
 };

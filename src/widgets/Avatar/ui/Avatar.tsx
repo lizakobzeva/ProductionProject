@@ -1,6 +1,6 @@
-import Chameleon from "shared/assets/chameleon.svg";
 import style from "./Avatar.module.scss";
 import { Animals, AvatarIcons } from "./AvatarTyps";
+import { Link } from "react-router-dom";
 
 interface AvatarProps {
   UserName: string;
@@ -8,10 +8,10 @@ interface AvatarProps {
 }
 const Avatar = ({ UserName, UserAvatar }: AvatarProps) => {
   return (
-    <div className={style.Avatar}>
+    <Link className={style.Avatar} to={"/profile"}>
       <p>{UserName}</p>
       {AvatarIcons[UserAvatar]}
-    </div>
+    </Link>
   );
 };
 

@@ -15,8 +15,9 @@
 .links {
   display: flex;
   justify-content: center;
-  gap: 30px;
-  width: 40%;
+  align-items: center;
+  gap: 60px;
+  width: 20%;
 }
 .link {
   font-size: var(--font-size-l);
@@ -24,14 +25,14 @@
 }
 .activeLink {
   font-size: var(--font-size-l);
-  color: var(--color4);
+  color: var(--color2);
+  transform: scale(1.2);
 }
 
 .settings {
   display: flex;
   align-items: center;
   gap: 30px;
-  width: 30%;
 }
 .auth {
   width: 30%;

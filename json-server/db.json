@@ -23,6 +23,14 @@
       "avatar": "dog",
       "likedPosts": [""],
       "id": "RJUbrBh"
+    },
+    {
+      "email": "marina@list.ru",
+      "password": "$2a$10$gylw89RrEVP/ZY1PtTcBee.WFHsM8VXjAUrT7xS3hNQkuRqhA6c1G",
+      "name": "marina",
+      "avatar": "whale",
+      "likedPosts": [""],
+      "id": "pHQlR0S"
     }
   ]
 }
